@@ -1,0 +1,117 @@
+/* Interview List Styles */
+.interview-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.interview-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.interview-table th, .interview-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.interview-table th {
+  background-color: #f4f4f4;
+}
+
+.schedule-button, .send-button, .add-button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.schedule-button { background-color: #007bff; }
+.send-button { background-color: #28a745; }
+.add-button { background-color: #17a2b8; }
+
+.schedule-button:hover { background-color: #0056b3; }
+.send-button:hover { background-color: #218838; }
+.add-button:hover { background-color: #138496; }
+
+/* Form Styles */
+.form-container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .interview-table, .interview-table thead, .interview-table tbody, .interview-table th, .interview-table td, .interview-table tr {
+    display: block;
+  }
+  .interview-table thead tr {
+    display: none;
+  }
+  .interview-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  .interview-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  .interview-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .form-container-main {
+    width: 90%;
+  }
+}
