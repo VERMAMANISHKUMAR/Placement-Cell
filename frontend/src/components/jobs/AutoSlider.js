@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversalAccess } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import PopupAdd from "../PopupAd/PopupAd"; // Assuming this is your PopupAd component
-
+import MyChatbot from "../../chatbot/MyChatbot"; // path may vary
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isInstitutionsOpen, setIsInstitutionsOpen] = useState(false);
@@ -134,8 +134,8 @@ const Navbar = () => {
               </ul>
             )}
           </div>
-          <Link to="/alljobs" className="text-white text-xl no-underline mb-2 sm:mb-0">
-            Jobs
+          <Link to="/jobpost" className="text-white text-xl no-underline mb-2 sm:mb-0">
+            JobPost
           </Link>
           <Link to="/aboutus" className="text-white text-xl no-underline mb-2 sm:mb-0">
             About Us
@@ -159,22 +159,58 @@ const Navbar = () => {
   );
 };
 
+
+
+
+
+
 const FloatingButtons = () => {
+  const [showChatbot, setShowChatbot] = useState(false);
+  const chatbotRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        chatbotRef.current &&
+        !chatbotRef.current.contains(event.target)
+      ) {
+        setShowChatbot(false);
+      }
+    };
+
+    if (showChatbot) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showChatbot]);
+
   return (
     <div className="floating-buttons">
-      <Link to="/" className="floating-btn">
-        ↗️
-      </Link>
-      <Link to="/" className="floating-btn">
-        💬
-      </Link>
-      <Link to="/" className="floating-btn">
-        📋
-      </Link>
+      <div className="relative">
+        <div
+          className="floating-btn"
+          onClick={() => setShowChatbot((prev) => !prev)}
+        >
+          💬
+        </div>
+
+        {showChatbot && (
+          <div
+            ref={chatbotRef}
+            className="mt-10 right-10 z-50 h-100 w-250 "
+          >
+            <MyChatbot />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
-
 const App = () => {
   return (
     <div className="bg-gray-900 text-white">

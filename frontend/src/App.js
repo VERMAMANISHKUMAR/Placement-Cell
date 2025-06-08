@@ -21,6 +21,8 @@ import Calendar from "./pages/Dashboard/Calendar";
 import AccountPage from "./pages/Dashboard/Account";
 import Transaction from "./pages/Dashboard/Transactions/Transactions";
 import ProfilePage from "./pages/Dashboard/ProfilePage";
+// import MyChatbot from './chatbot/MyChatbot'
+import JobPost from './components/jobpost/JobPost';
 const App = () => {
   const [user, setUser] = useState(null);
   const isAuthenticated = !!localStorage.getItem("token");
@@ -50,6 +52,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/students/add" element={<AddStudent />} />
@@ -75,6 +78,8 @@ const App = () => {
         <Route path="/account" element={<AccountPage/>} />
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/profile" element={<ProfilePage />} />
+        {/* <Route path="/chatbot" element={<MyChatbot />} /> */}
+        <Route path="/jobpost" element={<JobPost />} />
       </Routes>
       <Footer />
     </Router>
