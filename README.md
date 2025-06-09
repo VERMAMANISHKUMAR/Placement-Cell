@@ -14,8 +14,7 @@ A short description of your project.
 
 ## 📷 Screenshot
 
-![App Screenshot](![image](https://github.com/user-attachments/assets/a5843ba1-2308-4a10-af36-1e4717c05cdc)
-)
+![image](https://github.com/user-attachments/assets/a5843ba1-2308-4a10-af36-1e4717c05cdc)
 
 ## 📦 Installation
 
