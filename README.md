@@ -51,10 +51,6 @@ A full-stack web application designed to streamline the **job posting**, **stude
 
 ## 📦 Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/job-portal-app.git
-
 # Go to the project directory
 cd job-portal-app
 
