@@ -1,6 +1,6 @@
 # 🎓 Job Portal & Student Management System
-# Deploy Link :- https://placement-cell-qr4e.onrender.com/
-# Description 
+## Deploy Link :- https://placement-cell-qr4e.onrender.com/
+## Description 
 A full-stack web application designed to streamline the **job posting**, **student management**, and **interview scheduling** process. This platform enables recruiters to post jobs, students to register, and admins to manage interview schedules—all while ensuring a secure, mobile-friendly experience.
 
 ---
