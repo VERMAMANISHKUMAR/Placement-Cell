@@ -1,7 +1,7 @@
 # MyJobPortal 
 
 A short description of your project.
-
+## https://placement-cell-qr4e.onrender.com/
 ## 🚀 Features
 - Feature 1
 - Feature 2
@@ -14,7 +14,8 @@ A short description of your project.
 
 ## 📷 Screenshot
 
-![App Screenshot](images/screenshot.png)
+![App Screenshot](![image](https://github.com/user-attachments/assets/a5843ba1-2308-4a10-af36-1e4717c05cdc)
+)
 
 ## 📦 Installation
 
